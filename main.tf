@@ -1,8 +1,8 @@
 
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIAXGXLFNAIAYJNE627"
-  secret_key = "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"
+  access_key = ""
+  secret_key = ""
 }
 
 module "ec2module"{
