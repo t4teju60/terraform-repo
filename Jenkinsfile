@@ -8,6 +8,12 @@ pipeline {
     }
 
     stages {
+
+        stage('checkout') {
+            steps {
+                git branch: ‘master’, url: ‘git@https://github.com/t4teju60/terraform-repo.git’
+            }
+        }      
         stage('Plan') {
             steps {
                 sh 'terraform init -input=false'
