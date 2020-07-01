@@ -22,7 +22,7 @@ pipeline {
               
         stage('Plan') {
             steps {
-                sh '/home/ec2-user/ter/terraform-repo/terraform init'
+                sh 'sudo /home/ec2-user/ter/terraform-repo/terraform init'
                 
             }
         }
