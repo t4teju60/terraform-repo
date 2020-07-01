@@ -13,7 +13,7 @@ pipeline {
        stage('terraform init') {
            steps {
               //sh '/home/ec2-user/terraform init ./jenkins'
-              sh 'ls -lrt'
+              sh 'terraform -v'
              }
         }
     }
