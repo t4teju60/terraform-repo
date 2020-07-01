@@ -18,10 +18,19 @@ pipeline {
             steps {
                 checkout scm
             }
-        }      
+        }
+        stage('Set Terraform path') {
+            steps {
+               script { 
+                def tfHome = tool name: ‘Terraform’
+                env.PATH = “${tfHome}:${env.PATH}”
+            }
+          }
+        }        
+              
         stage('Plan') {
             steps {
-                sh 'terraform init -input=false'
+                sh 'terraform'
             }
         }
 
