@@ -22,7 +22,8 @@ pipeline {
               
         stage('Plan') {
             steps {
-                sh '/home/ec2-user/ter/terraform-repo/terraform -v'
+                //sh '/home/ec2-user/ter/terraform-repo/terraform -v'
+                sh '/var/lib/jenkins/workspace/terraform_job/terraform init'
                 
             }
         }
