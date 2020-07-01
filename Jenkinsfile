@@ -7,7 +7,7 @@ pipeline {
     stages {
        stage('git clone') {
            steps {
-              scm checkout
+              checkout scm
              }
         }
        stage('terraform init') {
