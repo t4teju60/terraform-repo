@@ -7,7 +7,7 @@ pipeline {
           scm checkout
       }
   }
-   stage(‘Set Terraform path’) {
+   stage(‘SetTerraformpath’) {
      steps {
        script {
         def tfHome = tool name: ‘Terraform’
@@ -18,7 +18,7 @@ pipeline {
       }
    }
  
- stage(‘Provision infrastructure’) {
+ stage(‘Provisioninfrastructure’) {
  
     steps {
       dir(‘dev’)
