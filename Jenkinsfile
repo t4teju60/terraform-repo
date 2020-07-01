@@ -11,7 +11,7 @@ pipeline {
 
         stage('checkout') {
             steps {
-                git branch: ‘master’, url: ‘git@https://github.com/t4teju60/terraform-repo.git’
+                git branch: ‘master’, url: ‘https://github.com/t4teju60/terraform-repo.git’
             }
         }      
         stage('Plan') {
